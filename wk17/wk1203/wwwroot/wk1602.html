@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+          <video id="fire2" autoplay loop="true" src="fire2.mp4"> </video>
+          <a-asset-item id="zeroobj" src="Zero.obj"></a-asset-item>
+          <a-asset-item id="zeromtl" src="Zero.mtl"></a-asset-item>
+      </a-assets>
+
+  <!-- Using the asset management system. -->
+      <a-videosphere src="#fire2" ></a-videosphere>
+      <!--a-obj-model src="#zeroobj" mtl="#zeromtl" position="0 5 -20"
+      animation="property: position; to: 0 5 20; loop: true; dur: 2000"
+      ></a-obj-model-->
+    </a-scene>
+    <script>
+    var s2 = document.getElementsByTagName("a-scene");
+    var obj = document.createElement("a-obj-model");
+    obj.setAttribute("src","#zeroobj");
+    obj.setAttribute("mtl","#zeromtl");
+    obj.setAttribute("position","0 5 -20");
+    obj.setAttribute("animation","property: position; to: 0 5 20; loop: true; dur: 2000");
+    s2[0].appendChild(obj);
+    </script>
+  </body>
+</html>

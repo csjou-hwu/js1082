@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <!--a-box position="0 1.6 5"
+      animation__2="property: rotation; to: 180 360 0; dur: 1000;
+      startEvents: mouseenter; easing: linear; loop: false"
+      animation__3="property: color; to: #0000FF; dur: 1300;
+      startEvents: mouseenter; easing: linear; loop: false"
+      color="#FF0000"></a-box-->
+      <a-camera>
+          <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+    <script>
+    var s1 = document.getElementsByTagName("a-scene");
+    var i,j,x,y;
+    var colors = ["#FFFF00", "#FF7700", "#FF00FF", "#FF0077", "#770000",
+                  "#77FF00", "#777700"];
+    var ic = 0;
+    for (i=0; i<5; i++)
+    for (j=0; j<5; j++)
+    {
+      x = -4 + i*2;
+      y = -4 + j*2 + 1.6;
+    var b1 = document.createElement("a-box");
+    b1.setAttribute("animation__2","property: rotation; to: 180 360 0;" +
+      " dur: 1000; startEvents: mouseenter; easing: linear; loop: false");
+    b1.setAttribute("animation__3","property: color; to: " + colors[(ic++ % 7)] + "; dur: 1300;" +
+        " startEvents: mouseenter; easing: linear; loop: false");
+    b1.setAttribute("position", x + " " + y + " 10");
+    b1.setAttribute("color", "#FF0000");
+    s1[0].appendChild(b1);
+    }
+    </script>
+  </body>
+</html>

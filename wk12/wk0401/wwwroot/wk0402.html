@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+</head>
+<body>
+<button style="position: absolute;
+left: 100px; top: 100px">按我2下</button>
+<script>
+var i,j;
+for (i=0; i<5; i++)
+for (j=0; j<5; j+=1)
+{
+var btn = document.createElement("BUTTON");   // Create a <button> element
+btn.innerHTML = "按我一下";
+btn.style.position = "absolute";
+btn.style.left = (i*70) + "px";
+btn.style.top = (j*70) + "px";
+if (i == j) btn.style.color = "red";
+document.body.appendChild(btn);
+}              // Append <button> to <body>
+</script>
+
+</body>
+</html>

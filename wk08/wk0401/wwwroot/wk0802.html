@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+         <a-asset-item id="crate-obj" src="Bunny.obj"></a-asset-item>
+         <a-asset-item id="crate-mtl" src="Bunny.mtl"></a-asset-item>
+      </a-assets>
+
+      <!-- Using the asset management system. -->
+      <a-obj-model position="0 0 -3" src="#crate-obj" mtl="#crate-mtl"></a-obj-model>
+
+    </a-scene>
+  </body>
+</html>

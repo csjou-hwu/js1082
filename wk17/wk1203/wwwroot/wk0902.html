@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!--a-cylinder position="-3.8 0.5 -3.8" height="8"
+      rotation="0 160 0"  src="csjou.png"></a-cylinder-->
+
+    </a-scene>
+    <script>
+    var s1 = document.getElementsByTagName("a-scene");
+    var i,j,x,y;
+    x = [8,4,0,-4,-8,-4,0,4];
+    y =[0,4,8,-4,0,4,-8,-4];
+    for (i=0; i<8; i++)
+    {
+      var b1 = document.createElement("a-cylinder");
+      b1.setAttribute("position", x[i] + " 0.5 " + y[i] );
+      b1.setAttribute("height", "4");
+      b1.setAttribute("rotation", "0 160 0");
+      b1.setAttribute("src", "csjou.png");
+      s1[0].appendChild(b1);
+    }
+    </script>
+  </body>
+</html>

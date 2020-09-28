@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+    </a-scene>
+    <script>
+    var s1 = document.getElementsByTagName("a-scene");
+    var c1 = ["red", "orange", "yellow", "green",
+              "blue", "indigo", "purple"];
+    var sh1 = ["box","circle", "cone", "cylinder",
+              "dodecahedron", "plane", "ring", "sphere",
+              "tetrahedron", "torus-knot", "torus", "triangle"];
+    var i,j,k;
+    var ct = 0;
+    var ctsh = 0;
+    /*
+    <a-entity rotation="0 0 0"
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 4000">
+      <a-sphere position="10 0 0" color="red"></a-sphere>
+    </a-entity>
+    */
+    for (i=0; i<7; i++)
+    {
+    var en = document.createElement("a-entity");
+    en.setAttribute("rotation", "0 0 0");
+    en.setAttribute("animation", "property: rotation; to: 0 360 0; loop: true; dur: " + (10-i) + "000"); // (10000- i*1000));
+    var b1 = document.createElement("a-" + sh1[7]);   // Create a <button> element    b1.setAttribute("position", (-4 + i*2) + " " + (-4 + j*2) + " " + (-20 + k*2));
+    b1.setAttribute("position", (10 - i) + " " + (i) + " 0");
+    b1.setAttribute("color", c1[ct++]);
+    if (ct == 7) ct = 0;
+    en.appendChild(b1);
+    s1[0].appendChild(en);
+    }
+    </script>
+  </body>
+</html>

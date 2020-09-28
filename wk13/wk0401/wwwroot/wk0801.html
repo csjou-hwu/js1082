@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-box position="-1 0.5 -5" rotation="0 45 0" color="#FF0000"></a-box>
+      <a-box position="0 0 0" width="10" height="0.001" depth="20"  color="#00AF00"></a-box>
+      <a-entity light="color: #AFA; intensity: 1.5"
+      animation="property: position; from: -1 2 0; to: -1 0.1 0; dur: 2000;
+      easing: linear; loop: true"
+      position="-1 2 0"></a-entity>
+    </a-scene>
+  </body>
+</html>

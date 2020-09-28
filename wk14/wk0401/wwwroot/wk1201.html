@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <!--a-text position="0 1.6 -3" value="期中考第1題"
+      font="custom-msdf.json" font-image="custom.png" negate="false"
+      color="green"></a-text-->
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+
+    </a-scene>
+    <script>
+    var fname1=["wk0402.html",	"wk0602.html",	"wk0607b.html",	"wk0802.html",  "wk1002.html",
+                "wk0403.html",	"wk0603.html",	"wk0701.html",	"wk0803.html",	"wk1003.html",
+                "wk0501.html",	"wk0604.html",	"wk0702.html",	"wk0901.html",	"wk1004.html",
+                "wk0502.html",	"wk0605.html",	"wk0703.html",	"wk0902.html",	"wk1005.html",
+                "wk0503.html",	"wk0605b.html",	"wk0704.html",	"wk0903.html",	"wk1101.html",
+                "wk0504.html",	"wk0606.html",	"wk0705.html",	"wk0904.html",	"wk1101a.html",
+                "wk0601.html",	"wk0607.html",	"wk0801.html",	"wk1001.html",	"wk1102.html"];
+    var s = document.getElementsByTagName("a-scene");
+    var i;
+    var b1 = [];
+    for (i=0; i<35; i++)
+    {
+      b1[i] = document.createElement("a-text");
+      b1[i].setAttribute("position", (-5+(i%5)*3) + " " + (5 - Math.floor(i/5)) + " -3");
+      b1[i].setAttribute("value",fname1[i]);
+      //b1[i].setAttribute("font","custom-msdf.json");
+      //b1[i].setAttribute("font-image","custom.png");
+      //b1[i].setAttribute("negate","false");
+      b1[i].setAttribute("color","green");
+      s[0].appendChild(b1[i]);
+    }
+
+    var text1 = document.getElementsByTagName("a-text");
+    for (i=0; i<35; i++)
+    {
+    text1[i].id = fname1[i];
+    text1[i].addEventListener('click', function (evt) {
+           var url2 = this.id ;
+           location.href=url2;
+          });
+    }
+    </script>
+  </body>
+</html>

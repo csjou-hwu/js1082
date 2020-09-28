@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <a-text position="0 1.6 -3" value="期中考第1題"
+      font="custom-msdf.json" font-image="custom.png" negate="false"
+      color="green"></a-text>
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+
+    </a-scene>
+    <script>
+    var text1 = document.getElementsByTagName("a-text");
+    text1[0].addEventListener('click', function (evt) {
+           location.href="wk0901.html";
+          });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity id="mouseCursor" cursor="rayOrigin: mouse"></a-entity>
+      <a-box position="-1 1.6 -5"
+      animation="property: position; from: -1 1.6 -5; to: 1 8 -10; dur: 2000;
+      startEvents: mouseenter; easing: linear; loop: false"
+      animation__2="property: rotation; from: 0 0 0; to: 180 360 0; dur: 1000;
+      startEvents: mouseenter; easing: linear; loop: false"
+      animation__3="property: color; from: #FF0000; to: #00FF00; dur: 1300;
+      startEvents: mouseenter; easing: linear; loop: false"
+      color="#FF0000"></a-box>
+
+    </a-scene>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-box position="-1 0.5 -5" rotation="0 45 0" color="#FF0000"></a-box>
+
+    </a-scene>
+    <script>
+    // 取得 a-scene 物件
+    var s1 = document.getElementsByTagName("a-scene");
+    var b1 = document.createElement("a-box");   // Create a <button> element
+    //btn.innerHTML = "按我一下";
+    /*
+    btn.style.position = "absolute";
+    btn.style.left = (i*70) + "px";
+    btn.style.top = (j*70) + "px";
+    */
+    b1.setAttribute("position", "1 0.5 -5");
+    b1.setAttribute("rotation", "0 45 45");
+    b1.setAttribute("color", "#00FF00");
+    //document.body.appendChild(btn);
+    s1[0].appendChild(b1);
+    </script>
+  </body>
+</html>

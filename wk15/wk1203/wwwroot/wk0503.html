@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+    </a-scene>
+    <script>
+    var s1 = document.getElementsByTagName("a-scene");
+    var c1 = ["red", "orange", "yellow", "green", "blue", "indigo", "purple"];
+    var i,j,k;
+    var ct = 0;
+    for (i=0; i<5; i++)
+    for (j=0; j<5; j++)
+    for (k=0; k<5; k++)
+    {
+    var b1 = document.createElement("a-box");   // Create a <button> element
+    b1.setAttribute("position", (-4 + i*2) + " " + (-4 + j*2) + " " + (-20 + k*2));
+    b1.setAttribute("rotation", "0 0 0");
+    b1.setAttribute("color", c1[ct++]);
+    if (ct == 7) ct = 0;
+    s1[0].appendChild(b1);
+    }
+    </script>
+  </body>
+</html>

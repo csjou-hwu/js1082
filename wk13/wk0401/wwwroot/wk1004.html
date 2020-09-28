@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+    <script>
+    var s1 = document.getElementsByTagName("a-scene");
+    var i;
+    for (i=0; i<4; i++)
+    {
+      var b = document.createElement("a-box");
+      b.setAttribute("position", "0 " + (1+i*1.5) + " -3");
+      b.setAttribute("depth", "0.01");
+      b.setAttribute("src", "q" + (i+1) + ".png");
+      s1[0].appendChild(b);
+    }
+    var text1 = document.getElementsByTagName("a-box");
+    text1[0].addEventListener('click', function (evt) {
+           location.href="wk0901.html";
+          });
+    text1[1].addEventListener('click', function (evt) {
+           location.href="wk0902.html";
+          });
+   text1[2].addEventListener('click', function (evt) {
+           location.href="wk0903.html";
+          });
+    text1[3].addEventListener('click', function (evt) {
+           location.href="wk0904.html";
+          });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script>
+   function F1() {
+     var i;
+     for (i=0; i<10; i++)
+     {
+        document.getElementById("demo").innerHTML += Date() + "<br/>";
+     }
+   }
+</script>
+</head>
+<body>
+
+<h2>我的第一支 JavaScript 程式</h2>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+按我一下顯示日期與時間</button>
+
+<p id="demo"></p>
+<button type="button" onclick="F1()">按鈕2</button>
+</body>
+</html>
